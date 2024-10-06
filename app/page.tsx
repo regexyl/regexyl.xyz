@@ -1,21 +1,27 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/posts";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+      {/* <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
         My Portfolio
-      </h1>
+      </h1> */}
+      <p className="mb-4">{`Hi, I'm Regina and I like making things.`}</p>
+      <p className="mb-4">{`I'm currently a frontend engineer at agemo.ai in London, working on making a product that automates the creation of stateless functions from natural language.`}</p>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        If you'd like a chat to talk about anything,{" "}
+        <Link
+          className="text-orange-800 dark:text-orange-300 hover:text-orange-900 dark:hover:text-orange-200 transition hover:underline"
+          href="https://cal.com/regexyl"
+        >
+          my calendar
+        </Link>{" "}
+        is open.
       </p>
       <div className="my-8">
         <BlogPosts />
       </div>
     </section>
-  )
+  );
 }
