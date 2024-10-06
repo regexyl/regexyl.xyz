@@ -19,9 +19,9 @@ export default function Page() {
         </Link>{" "}
         is open.
       </p>
-      <div className="my-8">
+      {/* <div className="my-8">
         <BlogPosts />
-      </div>
+      </div> */}
     </section>
   );
 }
